@@ -1,38 +1,44 @@
-# ikt_front
+# Frontend Project with Docker and Vue
 
-This template should help get you started developing with Vue 3 in Vite.
+This project is a frontend application built with .NET and runs using Docker. It includes a PostgreSQL database and a PgAdmin interface.
 
-## Recommended IDE Setup
+---
 
-[VS Code](https://code.visualstudio.com/) + [Vue (Official)](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+## Prerequisites
 
-## Recommended Browser Setup
+- [Docker](https://www.docker.com/get-started) installed on your machine  
+- [Docker Compose](https://docs.docker.com/compose/install/) to run the project
+---
 
-- Chromium-based browsers (Chrome, Edge, Brave, etc.):
-  - [Vue.js devtools](https://chromewebstore.google.com/detail/vuejs-devtools/nhdogjmejiglipccpnnnanhbledajbpd)
-  - [Turn on Custom Object Formatter in Chrome DevTools](http://bit.ly/object-formatters)
-- Firefox:
-  - [Vue.js devtools](https://addons.mozilla.org/en-US/firefox/addon/vue-js-devtools/)
-  - [Turn on Custom Object Formatter in Firefox DevTools](https://fxdx.dev/firefox-devtools-custom-object-formatters/)
 
-## Customize configuration
+## Installation & Run
 
-See [Vite Configuration Reference](https://vite.dev/config/).
+1. **Download the repository**
+   ```bash
+   git clone https://github.com/Icaro4fonso/IKT_FRONT.git
 
-## Project Setup
+2. **Navigate to the directory**
+   ```bash
+   cd IKT_FRONT
 
-```sh
-npm install
-```
+3. **Environment Configuration**
 
-### Compile and Hot-Reload for Development
+    - Do not forget to use the provided `.env.example` file.
 
-```sh
-npm run dev
-```
+4. **Run the application using docker**
+   ```bash
+   docker compose up --build
 
-### Compile and Minify for Production
+5. **Access the aplication**
+   
+   - localhost:5173 (api) 
 
-```sh
-npm run build
-```
+## Stacks 
+
+1. **Vue**
+
+    - Easy to start a new project using npm packages and make requests using axios
+
+2. **Docker**
+
+    - Containerized setup: No need to install external tools or dependencies
