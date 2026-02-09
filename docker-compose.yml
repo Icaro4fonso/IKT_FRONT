@@ -1,0 +1,11 @@
+services:
+  ikt_front:
+    container_name: ikt_front
+    build:
+      context: .
+      dockerfile: Dockerfile
+    ports:
+      - "${FRONT_PORT}:5173"
+    env_file:
+      - .env
+    restart: unless-stopped
