@@ -20,7 +20,7 @@
         </thead>
         <tbody>
           <tr v-for="item in data" :key="item.monthYear">
-            <td>{{ item.month }}</td>
+            <td>{{ getMonthName(item.month) }}</td>
             <td>{{ item.totalSalesCount }}</td>
             <td>R$ {{ item.totalProfit.toLocaleString('en-US', { minimumFractionDigits: 2 }) }}</td>
           </tr>
@@ -40,6 +40,14 @@ const fetchData = async () => {
   data.value = res.data;
 };
 onMounted(fetchData);
+
+
+const getMonthName = (monthNumber) => {
+  if (!monthNumber) return '';
+  const date = new Date(2000, monthNumber - 1, 1);
+  return date.toLocaleString('en-US', { month: 'long' });
+};
+
 </script>
 
 <style scoped>
